@@ -1,3 +1,18 @@
+div,
+header,
+section,
+footer,
+h1,
+h2,
+h3,
+h4 {
+  outline: rgb(255, 0, 0) solid 2px;
+}
+
+.body {
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+}
+
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -10,6 +25,10 @@
 }
 
 .header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #f2f2f2;
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
@@ -28,4 +47,152 @@
   color: white;
   margin-right: 0;
   margin-top: 80px;
+}
+
+/* Лого в шапке */
+.header__logo {
+  width: 228px;
+  height: 32px;
+}
+
+.header__logo_color_dark {
+  background-image: url(../images/logo_place_header.svg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.header__logo_position {
+  position: absolute;
+  top: 30px;
+  left: 64px;
+}
+
+/* Главный заголовок */
+.header__title {
+  font-size: 102px;
+  font-weight: 600;
+  line-height: 96px;
+  width: 730px;
+}
+
+.header__title_position_left {
+  margin: 0 0 0 64px;
+}
+
+/* Подзоголовок и ссылка */
+.header__subtitle {
+  width: 388px;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 25px;
+}
+
+.header_subtitle_position {
+  position: absolute;
+  left: 64px;
+  bottom: 30px;
+}
+
+.header__link {
+  text-decoration: none;
+}
+
+.header__link::after {
+  content: ' \2192';
+}
+
+/* Главная иллюстрация */
+.header__main-illustration {
+  width: 765px;
+  height: 608px;
+  object-fit: cover;
+}
+
+.header__main-illustration_position {
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  z-index: 1;
+}
+
+/* Синий квадрат */
+.header__square-pic {
+  width: 568px;
+  height: 568px;
+  background-color: #2f80ed;
+}
+
+.header__square-pic_position {
+  position: absolute;
+  right: 0;
+  top: 64px;
+}
+
+
+/* Раздел Description */
+
+/*Отступ для разделов */
+.block-margin {
+  margin: 100px auto;
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+}
+
+.two-columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  background-color: #2f80ed;
+}
+
+.page_ .two-columns__brief {
+  width: 175px;
+  background-color: aqua;
+}
+
+.two-columns__main-text {
+  width: 80%;
+  min-width: 784px;
+}
+
+.two-columns__subtitle {
+  line-height: 1.2;
+  font-weight: normal;
+  font-size: 18px;
+  margin: 0;
+}
+
+.two-columns__paragraph {
+
+  line-height: 34px;
+  font-weight: normal;
+  font-size: 24px;
+  margin: 0;
+}
+
+.two-columns__paragraph_margin_top {
+  margin-top: 30px;
+}
+
+.two-columns__span-accent {
+  font-weight: 600;
+}
+
+
+/* Раздел Digits */
+
+.digits__table {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: chocolate;
+  width: 1100px;
+}
+
+.table-width {
+  width: 250px;
 }
