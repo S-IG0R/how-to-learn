@@ -6,12 +6,13 @@ h1,
 h2,
 h3,
 h4 {
-  outline: rgb(255, 0, 0) solid 2px;
+  outline: rgb(255, 0, 0) solid 1px;
 }
 
-.body {
-  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+section {
+  outline: rgb(0, 255, 60) solid 1px;
 }
+
 
 .page {
   min-width: 1100px;
@@ -25,6 +26,7 @@ h4 {
 }
 
 .header {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -73,6 +75,7 @@ h4 {
   font-weight: 600;
   line-height: 96px;
   width: 730px;
+  z-index: 2;
 }
 
 .header__title_position_left {
@@ -85,6 +88,7 @@ h4 {
   font-size: 18px;
   font-weight: normal;
   line-height: 25px;
+  z-index: 2;
 }
 
 .header_subtitle_position {
@@ -94,6 +98,7 @@ h4 {
 }
 
 .header__link {
+  color: #2f80ed;
   text-decoration: none;
 }
 
@@ -146,12 +151,10 @@ h4 {
   flex-direction: row;
   justify-content: space-between;
   width: 80%;
-  background-color: #2f80ed;
 }
 
-.page_ .two-columns__brief {
+.two-columns__brief {
   width: 175px;
-  background-color: aqua;
 }
 
 .two-columns__main-text {
@@ -164,6 +167,7 @@ h4 {
   font-weight: normal;
   font-size: 18px;
   margin: 0;
+  color: #2f80ed;
 }
 
 .two-columns__paragraph {
@@ -185,14 +189,114 @@ h4 {
 
 /* Раздел Digits */
 
-.digits__table {
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section__title {
+  text-align: center;
+  width: 60%;
+  margin: 0;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.section__subtitle {
+  margin: 0;
+  text-align: center;
+  width: 60%;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.table {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color: chocolate;
   width: 1100px;
 }
 
-.table-width {
+.table__cell {
   width: 250px;
+}
+
+.table__cell_margin-top {
+  margin-top: 60px;
+}
+
+.table__cell_heading {
+  margin: 0;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.table__cell_text {
+  margin: 20px 0 0 0;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.cell_margin_top {
+  margin-top: 60px;
+}
+
+
+/* Раздел Feynman */
+
+.feynman {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 890px;
+  position: relative;
+  background-color: #f2f2f2;
+  ;
+}
+
+.feynman__title {
+  margin: 100px 0 0 0;
+  width: 648px;
+  text-align: center;
+  line-height: 1.15;
+  font-size: 120px;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.feynman__subtitle {
+  margin: 70px 0 0 0;
+  text-align: center;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  z-index: 1;
+}
+
+.feynman__link {
+  position: absolute;
+  right: 48px;
+  top: 50%;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  text-decoration: none;
+  color: #2f80ed;
+  ;
+}
+
+.feynman__link::after {
+  content: ' \2192';
+}
+
+.feynman__image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
