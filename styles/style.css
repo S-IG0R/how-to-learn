@@ -1,15 +1,3 @@
-div, header,
-section, footer,
-h1, h2, h3, h4,
-a, p
- {
-  outline: rgb(255, 0, 0) solid 1px;
-}
-
-section {
-  outline: rgb(0, 255, 60) solid 1px;
-}
-
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -21,7 +9,7 @@ section {
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* Шапка сайта */
+/* Раздел Header */
 
 .header {
   position: relative;
@@ -34,7 +22,6 @@ section {
   max-height: 756px;
 }
 
-/* Лого в шапке */
 .logo {
   width: 228px;
   height: 32px;
@@ -42,14 +29,13 @@ section {
   background-position: center center;
 }
 
-.logo__place_header {
+.logo_place_header {
   background-image: url(../images/logo_place_header.svg);
   position: absolute;
   top: 30px;
   left: 64px;
 }
 
-/* Главный заголовок */
 .header__title {
   font-size: 102px;
   font-weight: 600;
@@ -60,7 +46,6 @@ section {
   padding: 0;
 }
 
-/* Подзоголовок и ссылка */
 .header__subtitle {
   width: 388px;
   font-size: 18px;
@@ -81,7 +66,6 @@ section {
   content: ' \2192';
 }
 
-/* Главная иллюстрация */
 .header__main-illustration {
   width: 765px;
   height: 608px;
@@ -92,7 +76,6 @@ section {
   z-index: 1;
 }
 
-/* Синий квадрат */
 .header__square-pic {
   width: 568px;
   height: 568px;
@@ -118,6 +101,11 @@ section {
 
 .two-columns__brief {
   width: 175px;
+  line-height: 1.2;
+  font-weight: normal;
+  font-size: 18px;
+  margin: 0;
+  color: #2f80ed;
 }
 
 .two-columns__main-text {
@@ -127,14 +115,6 @@ section {
   width: 80%;
   min-width: 784px;
 
-}
-
-.two-columns__subtitle {
-  line-height: 1.2;
-  font-weight: normal;
-  font-size: 18px;
-  margin: 0;
-  color: #2f80ed;
 }
 
 .two-columns__paragraph {
@@ -172,7 +152,6 @@ section {
   line-height: 1.15;
   font-size: 60px;
   font-weight: 600;
-  z-index: 1;
 }
 
 .section-subtitle {
@@ -190,27 +169,27 @@ section {
   justify-content: space-between;
   width: 1100px;
   position: relative;
-  z-index: 1;
 }
 
-.table__cell_heading {
+.table__cell {
+  width: 250px;
+  margin: 60px 0 0 0;
+}
+
+.table__heading {
   margin: 0;
   line-height: 34px;
   font-size: 24px;
   font-weight: 600;
+  color: black;
 }
 
-.table__cell_text {
+.table__text {
   margin: 20px 0 0 0;
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
-}
-
-.table__cell_theme_white {
-  width: 250px;
-  color: rgb(0, 0, 0);
-  margin: 60px 0 0 0;
+  color: black;
 }
 
 /* Раздел Feynman */
@@ -252,7 +231,6 @@ section {
   font-weight: normal;
   text-decoration: none;
   color: #2f80ed;
-  ;
 }
 
 .feynman__link::after {
@@ -263,12 +241,9 @@ section {
   position: absolute;
   bottom: 0;
   left: 0;
-
 }
 
-/* секция Кауфман */
-
-/* и элемента с модификатором вида ключ-значение */
+/* секция Kaufman */
 
 .kaufman {
   padding: 90px 0;
@@ -280,9 +255,26 @@ section {
 }
 
 .kaufman__theme_dark {
-  color: white;
   background-color: #1f1f1f;
   overflow: hidden;
+}
+
+.section-title_theme_dark {
+  z-index: 1;
+  color: white;
+}
+
+.section-subtitle_theme_dark {
+  z-index: 1;
+  color: white;
+}
+
+.table__theme_dark {
+  z-index: 1;
+}
+
+.table__heading_theme_dark {
+  color: white;
 }
 
 .table__cell_theme_dark {
@@ -291,7 +283,7 @@ section {
   margin: 80px 0 0 0;
 }
 
-.titles_theme_dark {
+.table__text_theme_dark {
   color: white;
 }
 
@@ -307,11 +299,12 @@ section {
   z-index: 0;
 }
 
-
 /* Footer */
 
 .footer {
-  padding: 60px 40px;
+  min-height: 350px;
+  padding-top: 60px;
+  padding-bottom: 40px;
   background-color: #1f1f1f;
   display: flex;
   align-self: center;
@@ -319,20 +312,26 @@ section {
 }
 
 .footer__columns {
-  display: flex;
-  min-height: 350px;
   width: 90%;
+  display: flex;
   justify-content: space-between;
 }
 
-.column__content_copyright {
-  flex-basis: 711px;
+.footer__column {
   display: flex;
+}
+
+.footer__column_content_info {
+  flex-direction: column;
+}
+
+.footer__column_content_copyright {
+  flex-basis: 711px;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.logo__place_footer {
+.logo_place_footer {
   background-image: url(../images/logo_place_footer.svg);
 }
 
@@ -349,11 +348,6 @@ section {
   content: "\A9  ";
 }
 
-.footer__column_content_info {
- display: flex;
- flex-direction: column;
-}
-
 .footer__column-header {
   margin: 0;
   line-height: 30px;
@@ -362,7 +356,7 @@ section {
   color: white;
 }
 
-.footer__column_links{
+.footer__column_links {
   display: flex;
   flex-direction: column;
   margin: 20px 0  16px 0;
@@ -379,7 +373,6 @@ section {
 }
 
 .footer__column_content_social {
-  display: flex;
   flex-direction: column;
 }
 
@@ -387,8 +380,5 @@ section {
   width: 16px;
   height: 16px;
   vertical-align: -2px;
-}
-
-.footer__social-item {
   margin-right: 10px;
 }
