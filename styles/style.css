@@ -1,6 +1,4 @@
 
-
-
 div,
 header,
 section,
@@ -261,9 +259,9 @@ section {
   overflow: hidden;
 } */
 
-.oakley__negative-margin {
+/* .page__oakley {
   margin-top: -40px;
-}
+} */
 
 /* Раздел Feynman */
 
@@ -562,9 +560,9 @@ section {
   justify-content: space-between;
 } */
 
-.logo_place_footer {
+/* .logo_place_footer {
   background-image: url(../images/logo_place_footer.svg);
-}
+} */
 
 /* .footer__author {
   color: white;

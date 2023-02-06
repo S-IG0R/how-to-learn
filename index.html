@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Научиться учиться</title>
-  <!-- <link rel="stylesheet" href="./styles/normalize.css">
-  <link rel="stylesheet" href="./styles/style.css"> -->
-  <link rel="stylesheet" href="index.css">
-
+  <link rel="stylesheet" href="./pages/index.css">
 </head>
-
-<body>
+<body class="root">
   <div class="page">
     <header class="header">
       <div class="logo logo_place_header"></div>
@@ -19,10 +14,9 @@
       <h2 class="header__subtitle">Какие современные и эффективные подходы к обучению вы можете использовать в своей
         жизни?<a href="#" class="header__link"> Узнать</a></h2>
       <img class="header__main-illustration" src="./images/header-image.png" alt="Мальчик с собакой">
-      <div class="header__square-pic rotation"></div>
+      <div class="header__square-pic page__rotation"></div>
     </header>
     <main>
-
       <section class="description">
         <div class="two-columns">
           <h2 class="two-columns__brief">Главные проблемы в обучении</h2>
@@ -38,7 +32,6 @@
           </div>
         </div>
       </section>
-
       <section class="techniques">
         <h2 class="section-title">Техника обучения</h2>
         <p class="section-subtitle">Пять практик от Барбары Оакли</p>
@@ -73,23 +66,15 @@
           </div>
         </div>
       </section>
-
       <section class="video">
         <h2 class="section-title">Видео на TED</h2>
         <p class="section-subtitle">Для тех, кто любит прокрастинировать</p>
         <div class="video__iframes">
-          <iframe class="iframe" width="515" height="316" src="https://www.youtube.com/embed/5MgBikgcWnY"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
-          <iframe class="iframe" width="515" height="316" src="https://www.youtube.com/embed/arj7oStGLkU"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
+          <iframe class="video__iframe" src="https://www.youtube.com/embed/5MgBikgcWnY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe class="video__iframe" src="https://www.youtube.com/embed/arj7oStGLkU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </section>
-
-      <section class="oakley oakley__negative-margin">
+      <section class="oakley page__oakley">
         <div class="two-columns">
           <h2 class="two-columns__brief">История Барбары Оакли</h2>
           <div class="two-columns__main-text">
@@ -99,15 +84,14 @@
               тогда Барбара придумала свой подход к точным наукам. Оказалось, если вам что-то «плохо даётся», ваши
               добытые трудом знания гораздо глубже, чем у тех, кому всё ясно с первого взгляда.</p>
           </div>
+        </div>
       </section>
-
       <section class="feynman">
         <h2 class="feynman__title">Метод Фейнмана</h2>
         <h3 class="feynman__subtitle">Выучить и не забыть</h3>
         <a href="#" class="feynman__link">Подробнее</a>
         <div class="feynman__image"></div>
       </section>
-
       <section class="digits">
         <h2 class="section-title">Цифры и факты</h2>
         <p class="section-subtitle">Про учёбу и мозг</p>
@@ -148,7 +132,6 @@
           </div>
         </div>
       </section>
-
       <section class="khan">
         <div class="khan__container">
           <address class="khan__author">Салман Хан</address>
@@ -158,7 +141,7 @@
             повсюду смогут получить навыки и знания, которые приносят успех в школе, карьере и жизни.
           </blockquote>
           <address class="khan__quote-author">Джордж Лукас</address>
-          <p class="khan__quote-author-subline">Кинорежиссер, продюсер</p>
+          <span class="khan__quote-author-subline">Кинорежиссер, продюсер</span>
           <div class="khan__book-container">
             <img src="./images/khan-book.jpg" alt="Обложка книги Весь мир - школа автора Салман Хан"
               class="khan__book-pic">
@@ -166,7 +149,6 @@
           </div>
         </div>
       </section>
-
       <section class="kaufman">
         <h2 class="section-title section-title_theme_dark">Принципы обучения</h2>
         <p class="section-subtitle section-subtitle_theme_dark ">от Джоша Кауфмана</p>
@@ -213,24 +195,22 @@
             <p class="table__text table__text_theme_dark">Уделяйте внимание количеству и скорости.</p>
           </div>
         </div>
-        <div class="kaufman__triangle rotation"></div>
+        <div class="kaufman__triangle page__rotation"></div>
       </section>
-
       <section class="resources">
         <h2 class="section-title">Полезные ресурсы</h2>
         <p class="section-subtitle">Больше материалов о техниках и лайфхаках обучения</p>
-        <div class="resources__logo-zone">
-          <a href="#" class="resources__link"><img class="resources__logo" src="./images/logo/resources-arzamas.svg"
-              alt="лого Арзамас"></a>
-          <a href="#" class="resources__link"><img class="resources__logo" src="./images/logo/resources-n1.svg"
-              alt="лого Н+1"></a>
-          <a href="#" class="resources__link"><img class="resources__logo" src="./images/logo/resources-strelka.svg"
-              alt="лого Стрелка"></a>
-          <a href="#" class="resources__link"><img class="resources__logo" src="./images/logo/resources-polka.svg"
-              alt="лого Полка"></a>
-        </div>
+        <ul class="resources__logo-zone">
+          <li><a href="#" class="resources__link"><img class="resources__logo" src="./images/logo/resources-arzamas.svg"
+              alt="лого Арзамас"></a></li>
+          <li><a href="#" class="resources__link"><img class="resources__logo" src="./images/logo/resources-n1.svg"
+              alt="лого Н+1"></a></li>
+          <li><a href="#" class="resources__link"><img class="resources__logo" src="./images/logo/resources-strelka.svg"
+              alt="лого Стрелка"></a></li>
+          <li><a href="#" class="resources__link"><img class="resources__logo" src="./images/logo/resources-polka.svg"
+              alt="лого Полка"></a></li>
+        </ul>
       </section>
-
     </main>
     <footer class="footer">
       <div class="footer__columns">
@@ -261,5 +241,4 @@
     </footer>
   </div>
 </body>
-
 </html>
